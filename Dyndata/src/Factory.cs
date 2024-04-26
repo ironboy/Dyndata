@@ -35,7 +35,9 @@ public static class Factory
 
     public static void Log(params object[] paras)
     {
-        var p = Arr(paras);
+        var p = Arr();
+        if (paras == null) { paras = [(object)null!]; }
+        foreach (var para in paras) { p.Push(para); }
         var stringColor = "\u001b[38;5;" + JSON.colors.strings + "m";
         var resetColor = "\u001b[" + JSON.colors.reset + "m";
         var r = p.Every(x => x is string) ?
