@@ -1,0 +1,4 @@
+.DS_Store
+Dyndata/obj
+Dyndata/bin
+node_modules
