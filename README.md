@@ -35,7 +35,7 @@ Log(arg1 arg2, /* …, */ argN)
 #### Options
 ```cs
 LogHighlight = false;    // Turns off syntax highlighting
-LogExtraNewline = false; // Turns of an extra new line after each log
+LogExtraNewline = false; // Turns off an extra new line after each log
 ```
 **Note**: Different consoles have varied support for colors. If colors look odd or you see color codes instead of colors - turn off the syntax highlighting!
 
