@@ -5,13 +5,16 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <PackageId>Dyndata</PackageId>
-        <PackageTags>Dynamic;Dynamic objects;Dynamic arrays;Dynamic lists</PackageTags>
+        <PackageTags>Dynamic;Objects;Arrays;Lists</PackageTags>
         <Description>Dyndata is a C# library, that works with C# version 12.0 and upwards. It makes handling objects and arrays/lists in C# a lot easier and more dynamic. It is inspired by how objects and arrays work in JavaScript and TypeScript.</Description>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <Authors>Ironboy</Authors>
         <Company>NodeHill</Company>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageProjectUrl>https://dyndata.nodehill.com</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/ironboy/Dyndata</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 
     <ItemGroup>

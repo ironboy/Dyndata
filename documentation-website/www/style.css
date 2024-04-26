@@ -9,6 +9,11 @@ body {
   -webkit-text-size-adjust: none;
 }
 
+article a {
+  color: #2444a5;
+  font-weight: bold;
+}
+
 main {
   max-width: 980px;
   margin: 0 auto;

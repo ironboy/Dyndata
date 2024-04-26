@@ -2,6 +2,8 @@
 © ironboy/NodeHill 2024
 
 ## About Dyndata
+>Start by [installing the Nuget package](https://www.nuget.org/packages/Dyndata) in your project!
+
 >To make all Dyndata methods available everywhere, include these two lines in any file in your project:
 >
 >```cs
