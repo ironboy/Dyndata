@@ -352,7 +352,7 @@ h3.bigger {
   }
 }
 
-img[src="log-example.gif"] {
+img[src*="log-example.gif"] {
   width: calc(100% - 100px);
   border-radius: 10px;
   background-color: #181818;
