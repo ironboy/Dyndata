@@ -53,7 +53,7 @@ Log("This is an object", anObject);
 ```
 
 #### Expected output
-![Expected output of the logging in the example above](log-example.gif)
+![Expected output of the logging in the example above](https://raw.githubusercontent.com/ironboy/Dyndata/main/documentation-website/www/log-example.gif)
 
 ## JSON: Stringify and Parse
 Dyndata has an built in JSON stringifier and JSON parser.
