@@ -17,7 +17,7 @@ public static partial class JSON
         }
         catch (Exception)
         {
-            var json2 = "\"_holder\":" + json + "}";
+            dynamic json2 = "{\"_holder\":" + json + "}";
             dynamic x = JsonConvert.DeserializeObject
                 <Dictionary<string, object>>(json2);
             parsed = x["_holder"];
