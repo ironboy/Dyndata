@@ -13,12 +13,14 @@ public static partial class JSON
         try
         {
             parsed = JsonConvert.DeserializeObject
-                <Dictionary<string, object>>(json)!;
+                <Dictionary<string, object>>(json);
         }
         catch (Exception)
         {
-            parsed = JsonConvert.DeserializeObject
-                <Dictionary<string, object>[]>(json)!;
+            var json2 = "\"_holder\":" + json + "}";
+            dynamic x = JsonConvert.DeserializeObject
+                <Dictionary<string, object>>(json2);
+            parsed = x["_holder"];
         }
         return Utils.TryToObjOrArr(parsed);
     }

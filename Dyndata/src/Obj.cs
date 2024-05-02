@@ -4,7 +4,12 @@ namespace Dyndata;
 public partial class Obj : DynamicObject
 {
 
-    private Dictionary<string, object> memory = new Dictionary<string, object>();
+    private readonly Dictionary<string, object> memory = [];
+
+    private dynamic GetValue(string key)
+    {
+        return memory.TryGetValue(key, out object value) ? value : null;
+    }
 
     public Obj() { }
 
@@ -15,17 +20,17 @@ public partial class Obj : DynamicObject
 
     public dynamic this[string key]
     {
-        get { return memory[key]; }
+        get { return GetValue(key); }
         set { memory[key] = Utils.TryToObjOrArr(value); }
     }
 
     public override bool TryGetMember(GetMemberBinder binder, out object result)
     {
-        var key = binder.Name;
-        return memory.TryGetValue(key, out result!);
+        result = GetValue(binder.Name);
+        return true;
     }
 
-    public override bool TrySetMember(SetMemberBinder binder, object? value)
+    public override bool TrySetMember(SetMemberBinder binder, object value)
     {
         var key = binder.Name;
         memory[key] = Utils.TryToObjOrArr(value!);
